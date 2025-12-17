@@ -1,0 +1,149 @@
+/* Full page container */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff; /* White background */
+  font-family: 'Arial', sans-serif;
+  color: #333333; /* Dark text for readability */
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Main content */
+.landing-content {
+  z-index: 2;
+  max-width: 700px;
+}
+
+/* Title */
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.highlight {
+  color: #2ecc71; /* Student-friendly green */
+  animation: highlightAnim 2s infinite alternate;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #555555;
+  animation: fadeIn 2s ease forwards;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background-color: #27ae60; /* Green */
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: #1e8449;
+}
+
+.register-btn {
+  background-color: #f39c12; /* Vibrant orange */
+  color: white;
+}
+
+.register-btn:hover {
+  background-color: #d35400;
+}
+
+/* Floating circles animation */
+.animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(46, 204, 113, 0.15); /* light green */
+  width: 100px;
+  height: 100px;
+  bottom: -150px;
+  left: 20%;
+  animation: rise 10s infinite linear;
+}
+
+.circle2 {
+  width: 150px;
+  height: 150px;
+  left: 50%;
+  background-color: rgba(241, 196, 15, 0.15); /* light yellow */
+  animation-duration: 12s;
+}
+
+.circle3 {
+  width: 80px;
+  height: 80px;
+  left: 75%;
+  background-color: rgba(231, 76, 60, 0.15); /* light red */
+  animation-duration: 8s;
+}
+
+/* Animations */
+@keyframes rise {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes highlightAnim {
+  0% { color: #2ecc71; }
+  100% { color: #27ae60; }
+}

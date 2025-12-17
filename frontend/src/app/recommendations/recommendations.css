@@ -1,0 +1,124 @@
+/* recommendations.css */
+
+/* Page container */
+.recommend-page {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+}
+
+/* Header */
+.recommend-page h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #111827;
+}
+
+/* Chatbox */
+.chatbox {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.chatbox input {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chatbox input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.chatbox button {
+  padding: 14px 24px;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.chatbox button:hover:not(:disabled) {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.chatbox button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* Error message */
+.error {
+  text-align: center;
+  color: #dc2626;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* Suggestions container */
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Suggestion card */
+.suggestion-card {
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.suggestion-card p {
+  font-size: 0.95rem;
+  margin: 4px 0;
+  color: #4b5563;
+}
+
+/* No suggestions message */
+.no-suggestions {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .chatbox {
+    flex-direction: column;
+  }
+
+  .chatbox button {
+    width: 100%;
+  }
+}

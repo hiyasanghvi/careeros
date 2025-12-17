@@ -1,0 +1,37 @@
+.tracker-page {
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.tracker-page h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.tracker-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.tracker-table th,
+.tracker-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.tracker-table th {
+  background: #f5f5f5;
+}
+
+select {
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+}

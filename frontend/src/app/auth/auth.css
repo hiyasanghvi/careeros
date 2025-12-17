@@ -1,0 +1,146 @@
+/* Full page container for auth pages */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff; /* White background */
+  font-family: 'Arial', sans-serif;
+  color: #333333;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Form card */
+.auth-card {
+  background-color: #f9f9f9;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  z-index: 2;
+  position: relative;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Title */
+.auth-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #27ae60;
+  font-weight: bold;
+  animation: fadeInDown 1s ease forwards;
+}
+
+/* Input fields */
+.auth-card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.auth-card input:focus {
+  border-color: #2ecc71;
+  box-shadow: 0 0 5px rgba(46,204,113,0.4);
+}
+
+/* Buttons */
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background-color: #27ae60;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.login-btn:hover {
+  background-color: #1e8449;
+}
+
+.register-btn {
+  background-color: #f39c12;
+  color: white;
+}
+
+.register-btn:hover {
+  background-color: #d35400;
+}
+
+/* Links */
+.auth-links {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.auth-links a {
+  color: #27ae60;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+/* Floating circles animation (background effect) */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(46, 204, 113, 0.1);
+  width: 80px;
+  height: 80px;
+  bottom: -100px;
+  left: 10%;
+  animation: rise 12s infinite linear;
+}
+
+.circle2 {
+  width: 120px;
+  height: 120px;
+  left: 50%;
+  background-color: rgba(241, 196, 15, 0.1);
+  animation-duration: 15s;
+}
+
+.circle3 {
+  width: 100px;
+  height: 100px;
+  left: 80%;
+  background-color: rgba(231, 76, 60, 0.1);
+  animation-duration: 10s;
+}
+
+/* Animations */
+@keyframes rise {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-120vh) rotate(360deg); }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
