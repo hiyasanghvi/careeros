@@ -21,8 +21,10 @@ requests==2.31.0
 openai==1.14.3
 
 # Pydantic (FastAPI models)
-pydantic==2.6.4
-pydantic-settings==2.2.1
+
+pydantic==1.10.13
+pydantic-settings==1.10.3
+
 
 # Utilities
 email-validator==2.1.0.post1
