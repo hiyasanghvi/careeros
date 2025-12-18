@@ -9,6 +9,8 @@ psycopg2-binary==2.9.9        # If using PostgreSQL
 
 # Auth & Security
 passlib[bcrypt]==1.7.4
+bcrypt==4.1.2
+
 python-jose==3.3.0
 
 # Environment variables
